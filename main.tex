@@ -1,0 +1,187 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.4, 27 July 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+% 
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons 
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper]{altacv}
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages. 
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% 
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font 
+%% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm,footskip=2\baselineskip}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{Mulberry}{HTML}{72243D}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Sepia}
+\colorlet{accent}{Mulberry}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\usepackage[colorlinks]{hyperref}
+
+\begin{document}
+
+\name{Raquel Marcolino de Souza}
+\tagline{Desenvolvedora de Software -- CPF: 144.892.427-86}
+%\photo{2.8cm}{Globe_High}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{raquelmarcolino25@gmail.com}
+  \phone{+55 (21) 98637-9560}
+  %\mailaddress{Elambilakkal(Hose),Calicut airport(Po),Kondotty, Malappuram }
+  \hspace{50px}\location{Rio de Janeiro, Brasil}
+  %\twitter{@twitterhandle}
+  \linkedin{linkedin.com/in/raquelmarcolino}
+  \github{github.com/xTecna}
+  \hspace{42px}\homepage{lattes.cnpq.br/3655376602626098}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+   %\orcid{orcid.org/0000-0002-8834-9172}
+}
+
+%% Make the header extend all the way to the right, if you want. 
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Experiência}
+
+\cvevent{Consultora}{Fiotec (Fundação Oswaldo Cruz) -- Ministério da Saúde}{Junho 2019 -- em curso}{Rio de Janeiro, Brasil}
+
+Introduzi uma cultura de testes em duas das pesquisas mais importantes do país (PNS e PNAD Contínua), a fim de assegurar que os relatórios sejam gerados corretamente e em tempo hábil.
+
+\divider
+
+\cvevent{Analista Censitária}{Instituto Brasileiro de Geografia e Estatística (IBGE)}{Setembro 2017 -- Abril 2019}{Rio de Janeiro, Brasil}
+
+Fiz parte do Censo Agro, um censo nacional bianual sobre o volume e a distribuição espacial de produtos agrícolas essenciais.
+
+\cvsection{Projetos}
+
+\begin{comment}
+\cvevent{Pesquisa de Estoques}{IBGE}{Outubro 2017 -- Dezembro 2017}{}
+
+\begin{itemize}
+    \item{Aumentei a eficiência da comunicação com empresas e contadores participantes do censo ao desenvolver um sistema de notificação automática.}
+\end{itemize}
+
+%One of the main products of Censo Agro, Pesquisa de Estoques is a web application focused on gathering and centralizing data from all researches in one place to coordinate their processes automatically and generate reports.\\
+%\url{ftp://ftp.ibge.gov.br/Estoque/Pesquisa_de_Estoques_[semestral]/2017_2_semestre/DF_2_semestre2017.pdf}
+
+\divider
+\end{comment}
+
+\cvevent{Execução de Rotinas do CEMPRE (Cadastro Central de Empresas)}{IBGE}{Janeiro 2018 -- Abril 2019}{}
+
+\begin{itemize}
+    \item{Lancei um programa para processar dados massivos das pesquisas anuais do IBGE e do Ministério do Trabalho, reduzindo extensivamente o erro humano e o tempo investido em cada procedimento.}
+    \item{Participei de várias reuniões para me certificar de que a aplicação atendia os requisitos dos clientes.}
+    \item{Mapeei todo o código com documentação e testes de unidade.}
+    \item{Criei um sistema de log no banco de dados para prolongar o monitoramento e manutenção da aplicação.}
+\end{itemize}
+
+\divider
+
+\cvevent{Pesquisa Nacional de Saúde (PNS) \& Pesquisa Nacional por Amostra de Domicílios Contínua (PNAD Contínua)}{FioTec (FioCruz)}{Junho 2019 -- em curso}{}
+
+\begin{itemize}
+    \item{Apresentei uma cultura de testes nas duas aplicações, apresentando uma nova tecnologia e implementando-a desde a codificação até a homologação.}
+    \item{Aumentei a eficiência do procedimento através de paralelização e boas práticas.}
+    \item{Auxiliei no desenvolvimento da seleção aleatória de domicílios para entrevistas domiciliares.}
+    \item{Participei na modelagem de dados voltadas para a realização da Pesquisa Domiciliar por Amostragem.}
+    \item{Trabalhei com a arquitetura de APIs do Sistema Integrado de Gerenciamento e Controle do IBGE para acompanhamento de coleta das pesquisas domiciliares.}
+\end{itemize}
+
+%CEMPRE is a massive database that comprehends records from every Brazilian company from several sources, such as from annual researches made by IBGE and data from the Ministry of Labour. I finished this project with a great documentation and unit testing cover.
+
+%\cvsection{A Day of My Life}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+%\wheelchart{1.5cm}{0.5cm}{%
+%  6/8em/accent!30/{Sleep,\\beautiful sleep}, 
+%  4/8em/accent!8/{Watching news},
+%  3/7em/accent!8/Meeting &Talking with friends,
+%  8/8em/accent!55/Day time Job,
+%  2/10em/accent!10/Sports and relaxation,
+%  5/6em/accent!20/Spending time with family
+%}
+
+\clearpage
+\cvsection[page2sidebar]{Publicações}
+
+\nocite{*}
+
+%\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+%\divider
+
+\printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Artigos Completos Publicados}},type=article]
+
+\divider
+
+\printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Artigos Apresentados em Congressos}},type=inproceedings]
+
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the 
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+\end{document}
